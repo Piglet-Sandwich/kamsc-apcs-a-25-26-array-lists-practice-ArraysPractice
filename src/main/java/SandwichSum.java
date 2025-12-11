@@ -12,5 +12,6 @@ public class SandwichSum {
         // Find the index of the first occurrence of endNum
         // Sum all integers found at the indices between them (strictly between, not including start and end)
         // Return the calculated sum
+        return 0;
     }
 }
