@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class InventoryPurge {
     public static void main(String[] args) {        
         ArrayList<String> shelf = new ArrayList<>(Arrays.asList(
@@ -19,6 +22,8 @@ public class InventoryPurge {
             "Adam's Squid Games Bread",
             "Broken Polytrack Wheel"
         ));
+        purgeInventory(shelf, recalled);
+        System.out.print("shelf = " + shelf.toString());
     }
     
     public static void purgeInventory(ArrayList<String> shelf, ArrayList<String> recalled) {
@@ -27,5 +32,10 @@ public class InventoryPurge {
         // You MUST modify shelf in-place (do not create a new list)
         // You MUST use .contains() to check if an item is recalled
         // Hint: Be careful about index shifting when removing during iteration!
+        for (String i : recalled) {
+            if (shelf.contains(i)) {
+                shelf.remove(i);
+            }
+        }
     }
 }
